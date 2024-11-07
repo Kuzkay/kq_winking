@@ -1,3 +1,6 @@
+# Script preview
+https://www.youtube.com/watch?v=4_Qhiurn-UI
+
 # Keybinds
 By default the keybinds for winking are `-` and `=` (left and right headlight). The keybinds can be changed in game. 
 
