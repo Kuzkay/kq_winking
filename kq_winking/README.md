@@ -1,3 +1,8 @@
+# Keybinds
+By default the keybinds for winking are `-` and `=` (left and right headlight). The keybinds can be changed in game. 
+
+To change the default keybinds you'll need to edit the `client.lua` file
+
 # Installation & usage guide
 
 This guide will provide step-by-step instructions on how to install and set up the script for your FiveM server.
