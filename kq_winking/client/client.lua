@@ -46,14 +46,11 @@ local function PerformWink(vehicle, dir)
     PlayEntityAnim(vehicle, animName, dict, 10.0, false, false, true, 0, 0)
 end
 
-RegisterNetEvent('kq_winking:client:wink')
-AddEventHandler('kq_winking:client:wink', function(netId, dir)
+RegisterNetEvent('kq_winking:client:wink', function(netId, dir)
+    if not NetworkDoesNetworkIdExist(netId) or not NetworkDoesEntityExistWithNetworkId(netId) then return end
+        
     local vehicle = NetworkGetEntityFromNetworkId(netId)
-    
-    -- Early exit if netId or entity does not exist
-    if not NetworkDoesNetworkIdExist(netId) or not DoesEntityExist(vehicle) then
-        return
-    end
+    if DoesEntityExist(vehicle) then return end
     
     PerformWink(vehicle, dir)
 end)
